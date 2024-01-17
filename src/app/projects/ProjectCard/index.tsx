@@ -8,7 +8,7 @@ export function ProjectsCard({
   return (
     <div className="projects">
       {projects.map((project) => (
-        <div>
+        <div key={project.name}>
           <h2>{project.name}</h2>
           <p>{project.description}</p>
         </div>
