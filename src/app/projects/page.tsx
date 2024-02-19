@@ -18,7 +18,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div>
+    <div className="m-10">
       <ProjectsCard projects={projects} />
     </div>
   )
