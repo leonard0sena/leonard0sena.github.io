@@ -1,12 +1,9 @@
-import React from 'react'
 import Image from 'next/image'
 
 export function Info() {
   return (
-    <div className="flex w-3/6 flex-col border-white border-2 m-10 gap-8 p-8 text-start">
+    <div className="flex flex-col border-white border-2 m-10 gap-8 p-8 text-start">
       <h1 className='text-white text-xl'>Other Infos</h1>
-      <p className='text-white'>Github: <a className="underline" href="https://github.com/leonard0sena" target="_blank">leonard0sena</a></p>
-      <p className='text-white'>Discord: @mastersorcerer</p>
       <div>
         <h1>Current Stack</h1>
         <div className='flex flex-row gap-4'>
@@ -21,7 +18,7 @@ export function Info() {
         <h1>Tools</h1>
         <div className='flex flex-row gap-4'>
           <Image src="icons/git-icon.svg" alt='git icon' width={40} height={40} />
-          <Image className='bg-white' src="icons/github-icon.svg" alt='github icon' width={40} height={40} />
+          <Image src="icons/github-icon.svg" alt='github icon' width={40} height={40} />
           <Image src="icons/visual-studio-code.svg" alt='vscode icon' width={40} height={40} />
           <Image src="icons/docker-icon.svg" alt='docker icon' width={40} height={40} />
           <Image src="icons/figma.svg" alt='figma icon' width={30} height={30} />
