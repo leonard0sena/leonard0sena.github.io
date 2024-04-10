@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { ProjectsCard } from "./ProjectCard";
+import { ProjectCard } from "./ProjectCard";
 
 async function getRepos() {
   const response = await fetch("https://api.github.com/users/leonard0sena/repos");
@@ -9,7 +9,7 @@ async function getRepos() {
 }
 
 export default function Projects() {
-  const [projects, setProjects] = useState<{ name: string; description: string; link: string; }[]>([]);
+  const [projects, setProjects] = useState<{ name: string; description: string; html_url: string; language: string; }[]>([]);
 
   useEffect(() => {
     getRepos().then((data) => {
@@ -18,8 +18,12 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="m-10">
-      <ProjectsCard projects={projects} />
+    <div className="m-10 flex flex-wrap gap-5">
+      {
+        projects.map((project) => (
+          <ProjectCard key={project.name} name={project.name} description={project.description} language={project.language} link={project.html_url} />
+        ))
+      }
     </div>
   )
 }
