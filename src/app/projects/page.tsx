@@ -1,6 +1,6 @@
 "use client"
-
 import { useEffect, useState } from "react";
+
 import { ProjectCard } from "./ProjectCard";
 
 async function getRepos() {

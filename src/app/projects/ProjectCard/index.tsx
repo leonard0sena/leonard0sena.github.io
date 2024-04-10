@@ -1,5 +1,3 @@
-import React from 'react'
-
 export function ProjectCard({name, description, language, link}: {name: string; description: string; language: string; link: string}) {
 
   const languagesColors = {
