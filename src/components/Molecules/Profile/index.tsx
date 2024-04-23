@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Profile () {
+export default function Profile () {
 
   return (
     <div className="flex flex-col gap-8 w-1/3 border-white border-2 m-10 p-8">
@@ -15,9 +15,9 @@ export function Profile () {
         <a href="" target="_blank">
           <Image src="icons/github-icon.svg" alt='github icon' width={30} height={30} />
         </a>
-        <a href="" target="_blank">
+        {/* <a href="" target="_blank">
           <Image src="icons/linkedin-icon.svg" alt="Linkedin" width={30} height={30} />
-        </a>
+        </a> */}
         <a href="" target="_blank">
           <Image src="icons/discord.svg" alt="Discord" width={30} height={30} />
         </a>

@@ -1,11 +1,10 @@
 "use client"
 import { useEffect, useState } from "react";
 
-import { ProjectCard } from "./ProjectCard";
+import ProjectCard from "@/components/Molecules/ProjectCard";
 
 async function getRepos() {
-  const response = await fetch("https://api.github.com/users/leonard0sena/repos");
-  return response.json();
+  return (await fetch("https://api.github.com/users/leonard0sena/repos")).json()
 }
 
 export default function Projects() {
